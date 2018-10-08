@@ -1,5 +1,5 @@
-import { Component, OnInit , Input} from '@angular/core';
-import {User, Users} from '../../user';
+import { Component, OnInit} from '@angular/core';
+import {User} from '../../user';
 import {UsersService} from '../../users.service';
 
 @Component({
@@ -10,17 +10,17 @@ import {UsersService} from '../../users.service';
 export class UsersComponent implements OnInit {
 
   users: User[];
-  response: any;
   constructor(private usersService: UsersService) {}
 
   ngOnInit() {
     this.getUsers();
+    console.log(this.users);
   }
 
   getUsers(): void{
     this.usersService.getUsers()
-        .subscribe( users => this.users= users);
-
+        .subscribe( users => console.log(this.users = users));
+  }
 
 
 }

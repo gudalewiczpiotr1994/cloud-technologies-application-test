@@ -1,11 +1,9 @@
-export interface Users{
-    id: number,
-    first_name: string,
-    last_name: string,
-    avatar: string,
-}
 
 export interface User{
-    data: any[],
+    page: number,
+    per_page: number,
+    total: number,
+    total_pages: number,
+    data: Array<any>
 }
 

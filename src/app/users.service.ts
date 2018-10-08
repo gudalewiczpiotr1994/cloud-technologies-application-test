@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class UsersService {
 
-  readonly urlApi = 'https://reqres.in/api/users/2';
+  readonly urlApi = 'https://reqres.in/api/users?page=2';
   users: Observable<User[]>;
 
   constructor(private http: HttpClient) {}
@@ -16,4 +16,6 @@ export class UsersService {
   getUsers(): Observable<User[]>{
      return this.http.get<User[]>(this.urlApi);
   }
+
+
 }

@@ -5,13 +5,13 @@
         </div>
         <div class="row">
             <ul class="col-12 users__form">
-                    <li class="list-group-item">
+                    <li class="list-group-item" *ngFor="let user of users">
                         <div class="row">
                             <div class="col-6">
                                 <img class="users_form--image">
                             </div>
                             <div class="col-6 users__form__information">
-                                <p>{{ users | json}}</p>
+                                <p>{{user.data}}</p>
                             </div>
                         </div>
                     </li>
