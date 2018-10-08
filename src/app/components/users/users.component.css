@@ -1,0 +1,19 @@
+.row{
+    margin: 0;
+}
+.users{
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    height: 60vh;
+    margin: 20vh auto;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,.2);
+}
+
+.users__title{
+    padding: 10px;
+    color:white;
+    width: 100%;
+    background: #7B0CE8;
+    border-radius: 2px;
+}
