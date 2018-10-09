@@ -73,7 +73,6 @@
 
 .users__container__form__information{
     text-align: center;
-    text-align: center;
     font-weight: bolder;
 }
 
@@ -91,7 +90,7 @@
 }
 
 @media(max-width: 768px) {
-    .users__form--image {
+    .users__container__form--image {
         top:0;
         margin: auto;
     }
