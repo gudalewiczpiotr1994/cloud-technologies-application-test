@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
     //use users from api response
     getUsers(): void{
         this.usersService.getUsers()
-            .subscribe( users => console.log(this.users = users = users.data));
+            .subscribe( users => console.log(this.users = users = users));
     }
 
 
