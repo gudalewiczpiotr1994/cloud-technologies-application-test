@@ -1,17 +1,31 @@
-<div class="container text-center">
+<div class="container">
     <div class="users">
         <div class="row">
             <h2 class="col-12 users__title">Users List</h2>
         </div>
-        <div class="row">
+        <div class="row ">
             <ul class="col-12 users__form">
+                <!--create elements of list-->
                     <li class="list-group-item" *ngFor="let user of users">
                         <div class="row">
-                            <div class="col-6">
-                                <img class="users_form--image">
+                            <div class="col-md-3">
+                                <img src={{user.avatar}} class="users__form--image">
                             </div>
-                            <div class="col-6 users__form__information">
-                                <p>{{user.data}}</p>
+                            <div class="col-md-9 users__form__information">
+                                <div class="col-12">
+                                    <p>{{user.first_name}} {{user.last_name}}</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="users__form__information--id"> ID: {{user.id}}</div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <button class="btn-primary btn">Check Details</button>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <button class="btn-success btn">Add User</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>

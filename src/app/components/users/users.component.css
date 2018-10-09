@@ -1,19 +1,82 @@
-.row{
+.row {
     margin: 0;
 }
-.users{
+
+.users {
     position: relative;
     background-color: #fff;
     width: 80%;
-    height: 60vh;
-    margin: 20vh auto;
-    box-shadow: 0 0 5px 0px rgba(0,0,0,.2);
+    height: 50vh;
+    margin: 25vh auto;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, .2);
 }
 
-.users__title{
+
+.users__title {
+    text-align: center;
     padding: 10px;
-    color:white;
+    color: white;
     width: 100%;
     background: #7B0CE8;
-    border-radius: 2px;
+}
+
+.users__form{
+    position: relative;
+    overflow-y:scroll;
+    max-height: 40vh;
+}
+.users__form::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    : 10px;
+    background-color: #F5F5F5;
+}
+
+.users__form::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.users__form::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #7B0CE8;
+}
+
+
+.users__form--image{
+    position: relative;
+    top:50%;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: -50px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.users__form__information{
+    text-align: center;
+}
+
+.users__form__information{
+    text-align: center;
+    font-weight: bolder;
+}
+.users__form__information--id{
+    display: block;
+    margin: 6px auto;
+    width: 120px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.2);
+    padding: 6px;
+}
+.btn{
+    width: 120px;
+    margin: 5px auto;
+}
+
+@media(max-width: 768px) {
+    .users__form--image {
+        top:0;
+        margin: auto;
+    }
 }

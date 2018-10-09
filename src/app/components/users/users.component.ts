@@ -1,26 +1,27 @@
 import { Component, OnInit} from '@angular/core';
 import {User} from '../../user';
+//import service - access to Users api
 import {UsersService} from '../../users.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+    selector: 'app-users',
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
 
-  users: User[];
-  constructor(private usersService: UsersService) {}
+    users: User[];
+    constructor(private usersService: UsersService) {}
 
-  ngOnInit() {
-    this.getUsers();
-    console.log(this.users);
-  }
+    ngOnInit() {
+        this.getUsers();
+    }
 
-  getUsers(): void{
-    this.usersService.getUsers()
-        .subscribe( users => console.log(this.users = users));
-  }
+    //use users from api response
+    getUsers(): void{
+        this.usersService.getUsers()
+            .subscribe( users => console.log(this.users = users = users.data));
+    }
 
 
 }
