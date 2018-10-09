@@ -3,46 +3,64 @@
 }
 
 .users {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
     background-color: #fff;
     width: 80%;
-    height: 50vh;
+    height: 50vh    ;
     margin: 25vh auto;
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, .2);
 }
 
 
 .users__title {
+    position: absolute;
+    display: block;
     text-align: center;
-    padding: 10px;
     color: white;
     width: 100%;
+    height: 20%;
     background: #7B0CE8;
 }
 
-.users__form{
+.users__title--h2{
+    position: relative;
+    top:50%;
+    margin-top: -20px;
+}
+
+.users__container{
+    position: absolute;
+    top:20%;
+    height: 80%;
+    width: 100%;
+}
+.users__container__form{
+    height: 100%;
     position: relative;
     overflow-y:scroll;
-    max-height: 40vh;
 }
-.users__form::-webkit-scrollbar-track {
+.users__container__form::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     : 10px;
     background-color: #F5F5F5;
 }
 
-.users__form::-webkit-scrollbar {
+.users__container__form::-webkit-scrollbar {
     width: 12px;
     background-color: #F5F5F5;
 }
 
-.users__form::-webkit-scrollbar-thumb {
+.users__container__form::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #7B0CE8;
 }
 
 
-.users__form--image{
+.users__container__form--image{
     position: relative;
     top:50%;
     display: block;
@@ -53,15 +71,13 @@
     border-radius: 50%;
 }
 
-.users__form__information{
+.users__container__form__information{
     text-align: center;
-}
-
-.users__form__information{
     text-align: center;
     font-weight: bolder;
 }
-.users__form__information--id{
+
+.users__container__form__information--id{
     display: block;
     margin: 6px auto;
     width: 120px;
@@ -79,4 +95,11 @@
         top:0;
         margin: auto;
     }
+}
+
+.test{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 80%;
 }
